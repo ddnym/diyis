@@ -1,4 +1,6 @@
 Diyis::Application.routes.draw do
+  resources :testdb2s
+
   resources :testdbs
 
   # The priority is based upon order of creation:

@@ -1,0 +1,23 @@
+<h1>Listing testdb2s</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @testdb2s.each do |testdb2| %>
+  <tr>
+    <td><%= testdb2.name %></td>
+    <td><%= link_to 'Show', testdb2 %></td>
+    <td><%= link_to 'Edit', edit_testdb2_path(testdb2) %></td>
+    <td><%= link_to 'Destroy', testdb2, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Testdb2', new_testdb2_path %>

@@ -1,0 +1,54 @@
+DIYIS stories and their rough order of implementation
+
+Story: name, author, searchable? (are page ids hidden), private? (is it visible on public list)
+	create
+	edit
+	list
+	delete
+	play
+Page: storyId, tag, text, anchor?
+	create
+	edit
+	delete?	- orphan check, you can hide the choice via condition, so this is not necessary
+Choice: pageId, text, targetId
+	create
+	edit
+	delete? - orphan check, you can use condition to hide an unwanted one anyway so this is not necessary
+	ordering
+	apply
+Variables: find storage mechanism (session)
+	need to explicitly define them, or are created on definition
+	defaults?
+Action: choiceId, var, op, value
+	create
+	edit
+	ordering
+	delete
+	page actions?
+Condition: allow editor to hide based on Variables, order shouldn't matter
+	create
+	edit
+	delete
+User: authentication, Devise?
+	pages and stories mark who modified them
+	profile?
+Role: by story and user
+	Owner - can change user roles
+	Add - can add new pages
+	Edit - can modify own pages
+	FullEdit - can edit anyone
+	delete? - can be dangerous, leave entire areas orphaned
+Markup: BBCode
+	font size, color, bold, italic, underline to start
+	maybe others as needed
+Interpolation: variable display
+	page text
+	choice text
+Status: line of Interpolated text
+	show
+Tagging: probably using a plugin, story level
+Images: still not sure, bandwidth, storage, safety, all are issues
+
+Need to determine what editing UI and playing UI look like.
+
+
